@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { CustomizerSettingsService } from "src/app/common/customizer-settings/customizer-settings.service";
 
 @Component({
@@ -9,19 +10,26 @@ import { CustomizerSettingsService } from "src/app/common/customizer-settings/cu
 export class LoginComponent implements OnInit {
   hide = true;
 
+  form : FormGroup | any
+
   constructor(
-      public themeService: CustomizerSettingsService
+      public themeService: CustomizerSettingsService,
+      private formBuilder: FormBuilder
   ) {}
 
 
   ngOnInit(): void {
-      
+      this.form = this.formBuilder.group({
+        matricule: '',
+        password: ''
+      });
   }
 
 
 
-
-
+  submit(): void {
+    console.log(this.form.getRawValue());
+  }
 
 
   toggleTheme() {
