@@ -5,8 +5,8 @@ import {
     ApexChart,
     ApexFill,
     ChartComponent
-} from "ng-apexcharts";
-import { CustomizerSettingsService } from "src/app/layouts/common/customizer-settings/customizer-settings.service";
+} from "ng-apexcharts"; 
+import { CustomizerSettingsService } from "src/app/common/customizer-settings/customizer-settings.service";
 
 export type ChartOptions = {
     series: ApexNonAxisChartSeries;

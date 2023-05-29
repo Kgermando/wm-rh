@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomizerSettingsService } from 'src/app/layouts/common/customizer-settings/customizer-settings.service';
+import { CustomizerSettingsService } from "src/app/common/customizer-settings/customizer-settings.service";
 import { countries } from 'src/app/shared/utils/countries';
 import { Countries } from 'src/app/shared/models/country.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -112,7 +112,6 @@ export class RegisterComponent implements OnInit {
                 nbr_dependants: this.identiteFormGroup.value.nbr_dependants,
                 nbr_dependants_max: this.identiteFormGroup.value.nbr_dependants_max,
                 adresse: this.identiteFormGroup.value.adresse,
-
                 matricule: '1234',
                 numero_cnss: '1234',
                 role: '1',
@@ -136,7 +135,7 @@ export class RegisterComponent implements OnInit {
                 password: '1234',
                 password_confirm: '1234',
                 statut_presence: false,
-                syndicat: false,
+                syndicat: false 
             };
             this.http.post(`${environment.apiURL}/register`, body).subscribe(() => {
                 this.isLoading = false;

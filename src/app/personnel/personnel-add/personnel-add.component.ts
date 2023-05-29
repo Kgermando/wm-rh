@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomizerSettingsService } from 'src/app/layouts/common/customizer-settings/customizer-settings.service';
+import { CustomizerSettingsService } from 'src/app/common/customizer-settings/customizer-settings.service';
 import { countries } from 'src/app/shared/utils/countries';
 import { Countries } from 'src/app/shared/models/country.model';
 import { FormBuilder, Validators } from '@angular/forms';

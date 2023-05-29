@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'; 
-import { CustomizerSettingsService } from 'src/app/layouts/common/customizer-settings/customizer-settings.service';
+import { CustomizerSettingsService } from 'src/app/common/customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-analytics-stats',

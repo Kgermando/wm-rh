@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
-import { ToggleService } from './toggle.service';
-import { CustomizerSettingsService } from 'src/app/layouts/common/customizer-settings/customizer-settings.service';
+import { ToggleService } from './toggle.service'; 
 import { DatePipe } from '@angular/common';
+import { CustomizerSettingsService } from '../customizer-settings/customizer-settings.service';
 
 @Component({
   selector: 'app-header',

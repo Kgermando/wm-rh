@@ -5,7 +5,7 @@ import {
     ApexPlotOptions,
     ApexChart
 } from "ng-apexcharts";
-import { CustomizerSettingsService } from "src/app/layouts/common/customizer-settings/customizer-settings.service";
+import { CustomizerSettingsService } from "src/app/common/customizer-settings/customizer-settings.service";
 
 export type ChartOptions = {
     series: ApexNonAxisChartSeries;

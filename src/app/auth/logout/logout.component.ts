@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CustomizerSettingsService } from 'src/app/layouts/common/customizer-settings/customizer-settings.service';
+import { CustomizerSettingsService } from "src/app/common/customizer-settings/customizer-settings.service";
 
 @Component({
   selector: 'app-logout',
@@ -7,19 +7,19 @@ import { CustomizerSettingsService } from 'src/app/layouts/common/customizer-set
   styleUrls: ['./logout.component.scss']
 })
 export class LogoutComponent {
-  constructor(
-    public themeService: CustomizerSettingsService
-) {}
+    constructor(
+      public themeService: CustomizerSettingsService
+  ) {}
 
-toggleTheme() {
-    this.themeService.toggleTheme();
-}
+  toggleTheme() {
+      this.themeService.toggleTheme();
+  }
 
-toggleCardBorderTheme() {
-    this.themeService.toggleCardBorderTheme();
-}
+  toggleCardBorderTheme() {
+      this.themeService.toggleCardBorderTheme();
+  }
 
-toggleCardBorderRadiusTheme() {
-    this.themeService.toggleCardBorderRadiusTheme();
-}
+  toggleCardBorderRadiusTheme() {
+      this.themeService.toggleCardBorderRadiusTheme();
+  }
 }
