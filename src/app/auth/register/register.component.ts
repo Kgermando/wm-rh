@@ -139,7 +139,7 @@ export class RegisterComponent implements OnInit {
             };
             this.http.post(`${environment.apiURL}/register`, body).subscribe(() => {
                 this.isLoading = false;
-                this.router.navigate(['/layouts']);
+                this.router.navigate(['/dashboard']);
             });
         }
     }

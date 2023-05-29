@@ -1,6 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CustomizerSettingsService } from "src/app/common/customizer-settings/customizer-settings.service";
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +13,15 @@ import { CustomizerSettingsService } from "src/app/common/customizer-settings/cu
 export class LoginComponent implements OnInit {
   hide = true;
 
+  isLoading = false;
+
   form : FormGroup | any
 
   constructor(
       public themeService: CustomizerSettingsService,
-      private formBuilder: FormBuilder
+      private formBuilder: FormBuilder,
+      private http: HttpClient,
+    private router: Router
   ) {}
 
 
@@ -26,9 +33,15 @@ export class LoginComponent implements OnInit {
   }
 
 
-
   submit(): void {
-    console.log(this.form.getRawValue());
+    this.isLoading = true;
+    this.http.post(`${environment.apiURL}/login`, this.form.getRawValue(), {
+        withCredentials: true
+    }).subscribe(res => {
+        console.log(res);
+        this.isLoading = false;
+        this.router.navigate(['/dashboard']);
+    });
   }
 
 
